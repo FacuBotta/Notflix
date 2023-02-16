@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>NotFlix</title>
+
+</head>
+<body>
+    <header>
+        <div id="containerNav" class="containerNav">
+            
+            <a href="./index.html"><h2 class="logo" >NOTFLIX</h2></a>
+            <a id="aMovies" href="#">Films</a>
+            <a id="aSeries" href="#">Series</a>
+                <div class="searchContainer" id="searchContainer">
+                    <input id="titleSearchInput" type="text" placeholder="Title" >
+                </div>
+        </div>
+    </header>
+    <main>
+        <h2 id="typeResult">movie</h2>
+        <div id="blockDescription" class="blockDescription">
+            <div class="posterContainer" id="posterContainer"></div>
+            <div class="descriptionContainer">
+                <h3 id="title" class="title">Title</h3>
+                <h4 id="year" >Year</h4>
+                <h4 id="country">Country</h4>
+                <h4 id="director">Director</h4>
+                <h4 id="genre">Genre</h4>
+                <h4 id="runtime">Duration</h4>
+                <h4 id="rating">imdbRating</h4>
+                <h4 id="votes">imdbVotes</h4>
+                <p id="actors">Actors... Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <p class="description" id="description"> adipisicing elit. Recusandae ex accusamus repellat quibusdam unde officia corporis omnis. Ipsum, distinctio consectetur deleniti voluptatibus, vitae voluptatum similique autem, dolor odit ea sunt.</p>
+            </div>
+            <span id="flashDescription" class="flashDescription">
+                <h2 id="flashDescriptionTitle">Title</h2>
+                <h4 id="flashDescriptionYear">Year</h4>
+                <h4 id="flashDescriptionRuntime">Duration</h4>
+                <h4 id="flashDescriptionGenre">Genre</h4>
+                <p id="flashDescriptionDescription"> adipisicing elit. Recusandae ex accusamus repellat quibusdam unde officia corporis omnis. Ipsum, distinctio consectetur deleniti voluptatibus, vitae voluptatum similique autem, dolor odit ea sunt.</p>
+            </span>
+        </div>
+        <div class="carouselNotflix">
+            <div class="titleContainer">
+                <h3 id="carouselTitle" >Recomandé pour vous</h3>
+            </div>
+
+            <div class="carouselContainerAll">
+                <button id="carouselBtnLeft" class="carouselBtnLeft" role="button" ><</button>
+
+                <div id="carouselContainer" class="carouselContainer">
+                    
+                </div>
+
+                <button id="carouselBtnRigth" class="carouselBtnRigth" role="button" >></button>
+            </div>
+        </div>
+    </main>
+    <script src="./scripts.js"></script>
+</body>
+</html>

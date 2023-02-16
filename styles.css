@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+header {
+    padding: 30px 0;
+}
+
+.containerNav {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: flex-end;
+}
+
+.searchContainer {
+    position: absolute;
+    right: 5em;
+    min-width: 15em;
+    max-width: 18em;
+}
+
+.containerNav a {
+    color: rgb(116, 116, 116);
+    text-decoration: none;
+    margin-left: 20px;
+    float: left;
+}
+
+.containerNav a:hover,
+.containerNav a:active {
+    color: white;
+}
+
+.logo {
+    color: red;
+    font-size: 40px;
+    margin-right: 30px;
+    margin-bottom: -10px;
+    transition: all .3s ease;
+}
+
+.logo:hover {
+    scale: 1.2;
+    text-shadow: 2px 2px 20px rgba(181, 181, 181, 0.686);
+}
+
+input {
+    background-color: black;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+    width: 100%;
+}
+
+.resultsList {
+    width: fit-content;
+    max-height: 20em;
+    overflow: auto;
+    background-color: rgba(33, 33, 33, 0.926);
+    border-radius: 0 0 10px 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+    position: absolute;
+    z-index: 10000;
+    border-collapse: collapse;
+}
+
+.resultsList::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+.resultsList::-webkit-scrollbar {
+    width: 0;
+}
+
+li {
+    list-style: none;
+    padding: .3em;
+
+}
+
+li:nth-child(odd) {
+    background-color: rgb(40, 40, 40);
+    border-collapse: collapse;
+
+}
+
+li:hover {
+    color: red;
+    scale: 1.05;
+    background-color: rgba(65, 65, 65, 0.669);
+}
+
+#typeResult {
+    color: white;
+    font-size: 80px;
+    margin-left: 2em;
+    margin-top: 1em;
+}
+
+.blockDescription {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.posterContainer {
+    width: 40%;
+    min-height: 35.62em;
+    background-position-y: center;
+    background-position-x: 70%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 3.12em;
+    margin-top: 3.12em;
+    transition: all .4s ease;
+}
+
+.descriptionContainer {
+    font-size: 18px;
+    color: white;
+    height: fit-content;
+    width: 30%;
+    margin-left:4em;
+    margin-right: 2em;
+    padding: 1.3em;
+    background: linear-gradient(to right, rgb(25, 25, 25), rgba(0, 0, 0, 0.008));
+    border-radius: 10px;
+    transition: all 0.9s ease;
+}
+
+.descriptionContainer:hover {
+    transform: scale(1.2);
+    background: linear-gradient(to left, rgb(25, 25, 25), rgba(0, 0, 0, 0.008));
+}
+
+.descriptionContainer .title {
+    font-weight: 600;
+    font-size: 3.12em;
+    margin-bottom: 0.4em;
+}
+
+.descriptionContainer h4,
+.descriptionContainer p {
+    margin: 10px 0px;
+}
+
+.descriptionContainer .description {
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.75em;
+    max-width: 90%;
+}
+
+/* <<<<< carousel >>>>> */
+
+.carouselNotflix {
+    margin-bottom: 70px;
+}
+
+.titleContainer {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: rgb(204, 204, 204);
+    font-size: 30px;
+    margin-left: 2em;
+}
+
+.carouselBtnLeft,
+.carouselBtnRigth {
+    position: absolute;
+    top: 0;
+    border: none;
+    font-size: 50px;
+    height: 100%;
+    line-height: 40px;
+    width: 100px;
+    color: white;
+    cursor: pointer;
+    z-index: 500;
+    transition: .2s ease all;
+}
+
+.carouselBtnLeft {
+    left: 0;
+    background: linear-gradient(to right, black, rgba(0, 0, 0, 0) );
+}
+.carouselBtnRigth {
+    right: 0;
+    background: linear-gradient(to left, black, rgba(0, 0, 0, 0) );
+}
+
+.carouselBtnLeft:hover {
+    font-size: 70px;
+}
+.carouselBtnRigth:hover {
+    font-size: 70px;
+}
+
+.carouselContainerAll {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.carouselContainer {
+    width: 100%;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+.carouselContainer .carousel {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.carouselFilm {
+    min-width: 15%;
+    transition: .1s ease all;    
+}
+
+.flashDescription {
+    width: 15em;
+    height: fit-content;
+    z-index: 1;
+    position: fixed;
+    background-color: rgba(47, 47, 47, 0.901);
+    border-radius: 1em;
+    color: white;
+    padding: 1em;
+    opacity: 0;
+    transition: all .3s ease;
+    cursor: default;
+}
+
+.flashDescription p {
+    font-size: smaller;
+}
+
+.flashDescription.active {
+    opacity: 1;
+}
+
+.carouselFilm:hover {
+    transform: scale(1.03);
+    transform-origin: center;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.64);
+
+}
+
+.carouselFilm img{
+    width: 100%;
+    height: 90%;
+    vertical-align: top;
+}
+
+/* <<<<<< FIN CAROUSEL >>>>>> */
+
+@media screen and (max-width: 800px) {
+    .searchContainer {
+        position: absolute;
+        right: 0;
+        top: 5em;
+        width: 12em;
+    }
+
+    input {
+        width: 80%;
+    }
+
+    .resultsList {
+        text-align: left;
+    }
+
+    .containerNav {
+        justify-content: center;
+        align-items: stretch;
+        height: 100px;
+    }
+    
+    .containerNav a {
+        margin-top: 1em;
+    }
+
+    .containerNav .logo {
+        margin-bottom: 30px;
+    }
+
+    .typeResult {
+        margin: 0;
+    }
+    
+    .posterContainer {
+        width: 90%;
+    }
+
+    .descriptionContainer {
+        width: 90%;
+        margin-bottom: 5em;
+        font-size: 14px;
+        max-width: 100%;
+        background: linear-gradient(to bottom, rgb(25, 25, 25), rgba(0, 0, 0, 0.624));
+    }
+
+    .descriptionContainer:hover {
+        transform: scale(1.1);
+        background: linear-gradient(to top, rgb(25, 25, 25), rgba(0, 0, 0, 0.624));
+    }
+
+    .posterContainer:hover {
+        scale: 1;
+        transform: translateX(0);
+    }
+
+    .carouselNotflix .carouselContainerAll .carouselContainer {
+        overflow: visible;
+    }
+
+    .carouselNotflix .carouselContainerAll .carouselContainer .carousel {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .carouselNotflix .carouselContainerAll .carouselBtnLeft,
+    .carouselNotflix .carouselContainerAll .carouselBtnRigth {
+        display: none;
+    }
+}
